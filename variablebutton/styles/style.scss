@@ -1,0 +1,61 @@
+// Variables
+$primary-color: #e5e6d7;
+$secondary-color: #cccccc;
+$card-background-color: #c88d8d;
+$card-border-radius: 5px;
+$card-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+$card-padding: 20px;
+$card-title-font-size: 24px;
+$card-text-font-size: 16px;
+$button-border-radius: 5px;
+$button-font-size: 16px;
+$button-padding: 10px 20px;
+$button-background-color: $primary-color;
+$button-color: black;
+$button-hover-background-color: darken($primary-color, 10%);
+$button-active-background-color: darken($card-background-color,20%);
+
+// Card component
+.card {
+  background-color: $card-background-color;
+  border-radius: $card-border-radius;
+  box-shadow: $card-box-shadow;
+  padding: $card-padding;
+  width: 300px;
+
+  .card-header {
+    margin-bottom: $card-padding;
+  }
+
+  .card-title {
+    font-size: $card-title-font-size;
+    margin: 0;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-text {
+    font-size: $card-text-font-size;
+    margin: 0 0 $card-padding 0;
+  }
+
+  .card-button {
+    background-color: $button-background-color;
+    border: none;
+    border-radius: $button-border-radius;
+    color: $button-color;
+    cursor: pointer;
+    font-size: $button-font-size;
+    padding: $button-padding;
+
+    &:hover {
+      background-color: $button-hover-background-color;
+    &:active {
+      background-color: $button-active-background-color;
+    }
+    }
+  }
+}

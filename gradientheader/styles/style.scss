@@ -1,0 +1,65 @@
+// Define variables
+$primary-color: #2b5dad;
+$secondary-color: #fff;
+
+// Gradient background
+$header-bg: linear-gradient(to right, $primary-color, $secondary-color);
+
+// Header style
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: $header-bg;
+  color: $secondary-color;
+  
+  // Logo
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  // Navigation
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      
+      li {
+        margin-left: 1rem;
+        
+        a {
+          color: $secondary-color;
+          text-decoration: none;
+          transition: color 0.3s ease;
+          
+          &:hover,
+          &.active {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  
+  // Responsive
+  @media (max-width: 768px) {
+    flex-direction: column;
+    
+    .logo {
+      margin-bottom: 1rem;
+    }
+    
+    nav {
+      ul {
+        flex-direction: column;
+        align-items: center;
+        
+        li {
+          margin: 0.5rem 0;
+        }
+      }
+    }
+  }
+}
